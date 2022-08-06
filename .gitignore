@@ -1,0 +1,9 @@
+# Dependencies
+/node_modules
+
+# Production
+/build
+
+# Potential Copyright Issue for placeholder image
+public/images/profile-image.jpg
+public/images/profile-image-200x300.jpg
