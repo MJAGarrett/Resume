@@ -1,17 +1,23 @@
-@import url(./components/navbar.css);
-@import url(./components/generic.css);
+@import url(../components/navbar.css);
+@import url(../global.css);
 body {
-  margin: 0;
-  padding: 0;
   background-color: aliceblue;
 }
 header {
-  background-color: aqua;
+  background-color: #30d5ff;
 }
 header h1 {
   text-align: center;
   margin: 0 auto;
   padding: 40px 20px;
+}
+.toggle-nav {
+  display: none;
+  position: absolute;
+  max-width: 150px;
+  top: 10%;
+  left: 1%;
+  z-index: 100;
 }
 .profile figure {
   display: flex;
@@ -19,12 +25,11 @@ header h1 {
   margin: 0 0 40px 0;
 }
 main img {
-  /* float: left; */
   min-width: 200px;
   max-width: 400px;
 }
 .content-wrap {
-  width: 80%;
+  width: 85%;
   margin: 0 auto;
   padding: 60px 0;
 }
@@ -37,7 +42,7 @@ figcaption {
   margin: 0 auto;
 }
 .education {
-  background: #32373b;
+  background: #222;
   color: #f7f7ff;
 }
 .content-flex {
@@ -174,7 +179,7 @@ footer a:hover {
 }
 
 @media screen and (min-width: 1000px) {
-  header {
+  header.sidebar-is-active {
     border-bottom: #222 solid 4px;
   }
   header h1 {
@@ -182,8 +187,13 @@ footer a:hover {
     Margin is set to minumum of 20% of container and 250px
     to center header over main content when navbar is visible
     */
-    margin-left: min(20%, 250px);
     font-size: 60px;
+  }
+  header.sidebar-is-active h1 {
+    margin-left: min(20%, 250px);
+  }
+  .toggle-nav {
+    display: block;
   }
   /* .profile h2 is added to counter
     the higher specificity base style earlier in
@@ -197,16 +207,12 @@ footer a:hover {
     margin: 5px auto;
     max-width: 700px;
   }
-  .content-flex {
+  .content-flex.sidebar-is-active {
     flex-direction: row-reverse;
-  }
-  .nav-area {
-    flex: 1 0 20%;
-    max-width: 250px;
   }
   .education {
     color: #343434;
-    background-image: url(../images/books.jpg);
+    background-image: url(../../images/books.jpg);
     background-size: cover;
     background-position: top right;
     padding-bottom: 100px;
@@ -232,5 +238,11 @@ footer a:hover {
   }
   .work {
     box-shadow: inset rgba(0, 0, 0, 0.5) 0 50px 50px -60px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .content-wrap {
+    width: 65%;
   }
 }

@@ -26,12 +26,12 @@ nav ul {
   flex-wrap: wrap;
   border-bottom: 2px white solid;
 }
-nav ul li {
+nav li {
   display: flex;
   list-style: none;
   flex: 1 1 auto;
 }
-nav ul li a {
+nav a {
   flex: 1 1 auto;
   padding: 1em 0.5em;
   color: white;
@@ -41,29 +41,39 @@ nav ul li a {
   text-align: center;
   transition: all 0.15s ease-in-out;
 }
-nav ul li a:hover {
+nav a:hover {
   color: #222;
   padding-top: 1.5em;
   padding-bottom: 0.5em;
   background-color: white;
   transition: all 0.25s ease-in-out;
 }
-nav ul li a:focus {
+nav a:focus {
   color: #222;
   background-color: white;
 }
 
-@media screen and (min-width: 800px) and (max-width: 999px) {
+/* Responsive Section */
+
+@media screen and (min-width: 686px) and (max-width: 999px) {
   .nav-site li:last-of-type {
     border-right: rgb(21, 163, 206) 2px solid;
   }
   nav ul {
-    font-size: 1.4em;
     border-bottom: 2px white solid;
   }
 }
 @media screen and (min-width: 1000px) {
-  .nav-area {
+  nav a {
+    font-size: 1.4em;
+  }
+  .nav-area:not(.sidebar-active) .nav-site li:last-of-type {
+    border-right: rgb(21, 163, 206) 2px solid;
+  }
+  /* Sidebar Settings
+  ----------------------------------------*/
+  .sidebar-active {
+    max-width: 250px;
     height: 100vh;
     width: 20vw;
     display: flex;
@@ -73,29 +83,29 @@ nav ul li a:focus {
     border-right: 10px rgb(21, 163, 206) solid;
     border-bottom: none;
   }
-  .nav-area h2 {
+  .sidebar-active h2 {
     display: block;
     margin: 0.5em 10px;
     font-size: 1.6em;
     color: white;
     text-align: center;
   }
-  nav {
+  .sidebar-active nav {
     display: block;
     margin: 0;
     flex: initial;
   }
-  .nav-external {
+  .sidebar-active .nav-external {
     display: block;
     flex: initial;
   }
-  nav ul {
+  .sidebar-active ul {
     padding: 0;
     display: flex;
     flex-direction: column;
     border-bottom: none;
   }
-  nav ul li a {
+  .sidebar-active a {
     border-bottom: white 2px solid;
     padding: 0.5em 1em;
     color: white;
@@ -105,16 +115,19 @@ nav ul li a:focus {
     display: block;
     transition: all 0.15s ease-in-out;
   }
-  nav ul li:first-of-type a {
+  .sidebar-active li:first-of-type a {
     border-top: 2px white solid;
   }
-  nav ul li a:hover,
-  nav ul li a:focus {
+  .sidebar-active a:hover,
+  .sidebar-active a:focus {
     color: #222;
     padding: 0.5em 0 0.5em 3em;
     background-color: white;
     transition: all 0.25s ease-in-out;
   }
+
+  /* Sidebar Settings End
+  ----------------------------------------*/
 }
 
 /* Setting Up FontAwesome Icons */

@@ -5,31 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#222" />
-    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/pages/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Montserrat&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Montserrat&display=swap"
       rel="stylesheet"
     />
     <title>Michael Garrett</title>
     <script
+      async
       src="https://kit.fontawesome.com/149d5df8b5.js"
       crossorigin="anonymous"
     ></script>
+    <script
+      type="module"
+      src="./javascript/components/toggle-sidebar.js"
+    ></script>
   </head>
   <body>
+    <a href="#content" class="skip-link screen-reader-text">Skip to Content</a>
     <div class="page-flex">
       <header>
         <h1>Michael Garrett</h1>
+        <button class="toggle-nav">Toggle Navigation Sidebar</button>
       </header>
       <div class="content-flex">
         <section class="main-content-flex">
-          <main class="main-content">
+          <main class="main-content" id="content">
             <!-- Profile Section Start -->
             <section class="profile content-wrap">
               <article class="profile">
-                <h2>Junior Web Designer</h2>
+                <h2>Junior Web Developer</h2>
                 <figure>
                   <img
                     srcset="
@@ -224,7 +231,7 @@
             </div>
           </footer>
         </section>
-        <aside class="nav-area">
+        <div class="nav-area">
           <nav class="nav nav-site">
             <h2>Site Navigation</h2>
             <ul>
@@ -270,7 +277,7 @@
               </li>
             </ul>
           </nav>
-        </aside>
+        </div>
       </div>
     </div>
   </body>
