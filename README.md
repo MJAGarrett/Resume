@@ -8,15 +8,14 @@ Express v.4.18.1
 
 ## Launch
 
-The website can be set up by using a local server. This project was developed using the Live Server extension for Visual Studio Code. Alternatively, one can install nodemon
-using npm and run the server that way. <br>
-I will provide a link to the full site when it is finished and uploaded.
+Simply open up the index.html file in a browser. Or you can use the live server extension for Visual Studio Code.
 
 ## General Info
 
 - [Project Status](#status)
 - [Future Plans](#plans)
 - [What I Have Learned](#learnings)
+- [Attributions](#attributions)
 - [Thank You](#thanks)
 
 ### Project Status <a name="status" />
@@ -38,6 +37,10 @@ At the moment, the plan is to create pages for the links that have no target, an
 
 This project has so far been interesting. It has helped me get more familiar with front-end work in particular. The most prominent things I became more comfortable with was using flexbox and responsive design principles to make sure the site displays appropriately at any resolution. I also incorporated many little things that I was studying at the time.
 For example, lazy loading images likely to be offscreen and using srcset to serve appropriately sized images.
+
+### Attributions <a name="attributions" />
+
+Image credits are located in css/images/attributions.md.
 
 ### Thank You <a name="thanks" />
 
