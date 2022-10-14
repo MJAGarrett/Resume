@@ -40,7 +40,7 @@ For example, lazy loading images likely to be offscreen and using srcset to serv
 
 ### Attributions <a name="attributions" />
 
-Image credits are located in css/images/attributions.md.
+Image credits are located in <a href="https://github.com/MJAGarrett/Resume/blob/5e46c1e8b663cca5bbf96584f969a4b9c8ced721/public/images/Attributions.md">css/images/attributions.md</a>.
 
 ### Thank You <a name="thanks" />
 
