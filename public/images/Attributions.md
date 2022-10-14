@@ -1,4 +1,4 @@
-Accurate as of 08/06/2021
+Accurate as of 08/14/2022
 
 # Visual Assets attributions:
 
@@ -13,6 +13,12 @@ Accurate as of 08/06/2021
 - Downloaded from Unsplash.com
 - Uploaded by user Sharon Mccutcheon.
 - Link to profile/ https://unsplash.com/@sharonmccutcheon
+
+## Education-darkmode.jpg
+
+- Original photo downloaded from Pexels.com.
+- Uploaded by user Suzy Hazelwood.
+- Link to profile: https://www.pexels.com/@suzyhazelwood/
 
 ## Web-page-16by9.png
 

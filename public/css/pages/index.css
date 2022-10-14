@@ -1,10 +1,34 @@
 @import url(../components/navbar.css);
 @import url(../global.css);
+@import url(../components/darkmode.css);
+/* 
+  Test section for colors
+  body: hsla(208, 100%, 97%, 0.4)
+  header: #111
+  work: #9993b2
+  projects: #faf3dd
+
+
+*/
+
+:root {
+  --body-background: aliceblue;
+  --header-background: #30d5ff;
+  --projects-background: #faf3dd;
+  --work-background: #9993b2;
+  --font-color: black;
+  color: var(--font-color);
+}
+
 body {
-  background-color: aliceblue;
+  background-color: var(--body-background);
+  transition: color 1s ease-in-out 0.2s, background-color 1s ease-in-out 0.2s;
+}
+.page-flex :is(header, .profile, .work, .projects) {
+  transition: background-color 1s ease-in-out 0.2s;
 }
 header {
-  background-color: #30d5ff;
+  background-color: var(--header-background);
 }
 header h1 {
   text-align: center;
@@ -49,6 +73,7 @@ figcaption {
   display: flex;
   flex-direction: column-reverse;
 }
+
 /* Content and Articles section
 ------------------------------------------ */
 
@@ -89,10 +114,13 @@ figcaption {
 
 /* Work Experience */
 .work {
-  background: #9993b2;
+  background-color: var(--work-background);
 }
 .divider > .job-item {
   border-bottom-color: #343434;
+}
+body[darkmode="true"] .divider > .job-item {
+  border-bottom-color: #eee;
 }
 .job-details {
   margin-bottom: 1em;
@@ -100,7 +128,7 @@ figcaption {
 
 /* Projects Section */
 .projects {
-  background: #faf3dd;
+  background: var(--projects-background);
 }
 .project-details {
   margin-bottom: 20px;
@@ -115,6 +143,12 @@ figcaption {
 .project-item > img,
 .project-item figure {
   margin-bottom: 15px;
+}
+body[darkmode="true"] .projects a {
+  color: orange;
+}
+body[darkmode="true"] .projects :is(a:focus, a:hover) {
+  color: #aaa;
 }
 
 /* Footer Section */
@@ -171,8 +205,7 @@ footer a:hover {
   }
 }
 @media screen and (min-width: 750px) and (max-width: 1000px) {
-  .project-item img,
-  .project-item figure {
+  .project-item :is(img, figure) {
     float: left;
     margin-right: 20px;
   }
@@ -191,9 +224,6 @@ footer a:hover {
   }
   header.sidebar-is-active h1 {
     margin-left: min(20%, 250px);
-  }
-  .toggle-nav {
-    display: block;
   }
   /* .profile h2 is added to counter
     the higher specificity base style earlier in
@@ -219,6 +249,10 @@ footer a:hover {
     padding-top: 100px;
     box-shadow: rgba(0, 0, 0, 0.5) 0 -10px 50px -20px;
   }
+  body[darkmode="true"] .education {
+    color: var(--font-color);
+    background-image: url(../../images/education-darkmode.jpg);
+  }
   .education .content-wrap {
     background-image: linear-gradient(
       to right,
@@ -232,6 +266,13 @@ footer a:hover {
     position: relative;
     right: 200px;
     max-width: 40%;
+  }
+  body[darkmode="true"] .education .content-wrap {
+    background-image: linear-gradient(
+      to right,
+      hsl(176, 45%, 20%),
+      transparent
+    );
   }
   .divider > .edu-item {
     border-bottom-color: #343434;

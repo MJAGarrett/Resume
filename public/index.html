@@ -22,11 +22,18 @@
       type="module"
       src="./javascript/components/toggle-sidebar.js"
     ></script>
+    <script type="module" src="./javascript/components/darkmode.js"></script>
   </head>
-  <body>
+  <body darkmode="false">
     <a href="#content" class="skip-link screen-reader-text">Skip to Content</a>
     <div class="page-flex">
       <header>
+        <div class="darkmode-toggle">
+          <input type="checkbox" name="checkbox" id="slider" />
+          <i class="fa-solid fa-sun"></i>
+          <i class="fa-solid fa-moon"></i>
+          <p>Dark Mode</p>
+        </div>
         <h1>Michael Garrett</h1>
         <button class="toggle-nav">Toggle Navigation Sidebar</button>
       </header>
@@ -37,7 +44,7 @@
             <section class="profile content-wrap">
               <article class="profile">
                 <h2>Junior Web Developer</h2>
-                <figure>
+                <!-- <figure>
                   <img
                     srcset="
                       ./images/profile-image.jpg         400w,
@@ -46,10 +53,14 @@
                     sizes="(max-width: 600px) 200px,
                         (min-width: 601px) 400px"
                     src="./images/profile-image-200x300.jpg"
-                    alt="Picture of the author wearing a cap and gown during graduation. He is wearing an altogether too smug smile."
+                    alt="Picture of the author."
                   />
                   <figcaption>I swear I am not as smug as I look.</figcaption>
-                </figure>
+                </figure> 
+                Commented out while waiting for a permanent profile picture
+              -->
+              <span class="fa-solid fa-user" style="font-size: 160px; margin-bottom: 4rem"></span>
+              <!-- Note: FontAwesome user image is placeholder, inline css will not be used in final product -->
                 <p>
                   Recent magna cum laude graduate in Linguistics from CSUN with
                   a passion for language and a keen interest in the speech
